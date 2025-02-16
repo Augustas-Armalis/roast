@@ -1,0 +1,363 @@
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+  font-family: 'SF Pro Display Regular';
+  background-color: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+img,
+video {
+  pointer-events: none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active {
+  outline: none;
+}
+
+img::selection {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  background-color: hsla(240, 2%, 90%, 0.1);
+}
+
+::-moz-selection {
+  background-color: hsla(240, 2%, 90%, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray2);
+  border-radius: 99px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray1);
+  transition: all 0.3s ease;
+}
+
+@font-face {
+  font-family: 'SF Pro Display Regular';
+  font-weight: 400;
+  src: url('https://augustas.co/fonts//Sf\ Pro\ Display\ REGULAR.OTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Medium';
+  font-weight: 500;
+  src: url('https://augustas.co/fonts/Sf\ Pro\ Display\ MEDIUM.OTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Bold';
+  font-weight: 700;
+  src: url('https://augustas.co/fonts/Sf\ Pro\ Display\ BOLD.OTF') format('truetype');
+}
+
+:root {
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  --ff-regular: 'SF Pro Display Regular', arial;
+  --ff-medium: 'SF Pro Display Medium', arial;
+  --ff-bold: 'SF Pro Display Bold', arial;
+
+  --white: hsla(0, 0%, 100%, 1);
+  --gray1: hsla(235, 5%, 70%, 1);
+  --gray2: hsla(235, 5%, 35%, 1);
+  --gray4: hsl(240, 2%, 10%);
+  
+  --black: hsla(0, 0%, 0%, 1);
+  --black-tr: hsla(0, 0%, 0%, 0.6);
+}
+
+/* ------------------------------------- */
+
+.tiny-board-text{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  cursor: default;
+  font-size: 16px;
+}
+
+.main-title{
+  text-align: center;
+  font-family: var(--ff-medium);
+  font-weight: var(--font-medium);
+  cursor: default;
+  font-size: 42px;
+  max-width: 600px;
+  letter-spacing: -0.2px;
+  margin-top: 24px;
+}
+
+.instrumental-shift{
+  font-family: "Instrument Serif";
+  font-size: 42px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.alt-text{
+  max-width: 500px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray1);
+  margin-top: 16px;
+  letter-spacing: 0.2px;
+}
+
+.button-text{
+  font-family: var(--ff-medium);
+  font-weight: var(--font-medium);
+  font-size: 18px;
+  
+}
+
+.alt-button-text{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  font-size: 12px;
+}
+
+.pfp-text{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  font-size: 14px;
+  color: var(--gray1);
+}
+
+.proc-number{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  color: var(--gray1);
+}
+
+.proc-text{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  color: var(--white);
+}
+
+.main-holder-to-be-not-body{
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 92px;
+  flex-direction: column;
+}
+
+.tiny-board{
+  margin-top: 36px;
+  padding: 4px 12px;
+  background-color: var(--gray4);
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.circle-growth-container {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle-growing {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--white);
+  border-radius: 50%;
+  animation: pop 1s ease-out infinite;
+}
+
+.circle-small {
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pop {
+  0% {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+}
+
+.main-cta-button{
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--white);
+  padding: 5px 50px;
+  color: var(--black);
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 42px;
+  transition: background-color 0.3s ease;
+}
+
+.main-cta-button:hover{
+  background-color: var(--gray1);
+}
+
+.button-text-holder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.pfp-img{
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  position: relative;
+  margin-left: -10px;
+  box-shadow: -1px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pfps-container {
+  display: flex;
+  align-items: center;
+}
+
+.people-holder{
+  display: flex;
+  gap:12px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.website-holder{
+  margin-top: 64px;
+  width: 700px;
+  height: 433px;
+  flex-shrink: 0;
+  border-radius: 17px 17px 0px 0px;
+  position: relative;
+}
+
+.website-holder:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.70) 48.48%, rgba(0, 0, 0, 0.83) 58.41%, rgba(0, 0, 0, 0.91) 69.92%, #000 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.website-holder:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.70) 48.48%, rgba(0, 0, 0, 0.83) 58.41%, rgba(0, 0, 0, 0.91) 69.92%, #000 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.website-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+}
+
+.processes-holder{
+  position: absolute;
+  z-index: 9;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  width:max-content;
+  
+}
+
+.process-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.proc-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+.proc-ainmation dotlottie-player {
+  mix-blend-mode: lighten;
+}
+
+
+
+
+
+footer{
+  border-top: 1px solid #19191A;
+  width: 100vw;
+  height: 100px;
+  margin-top: 128px;
+}
