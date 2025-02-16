@@ -114,7 +114,7 @@
 
       <p class="alt-text" style="opacity: 0;">We'll analyze, reimagine, and redesign your hero section, providing actionable design enhancements to drive higher conversions</p>
 
-      <a href="https://example.com" style="text-decoration: none;"><div class="main-cta-button" style="opacity: 0;">
+      <a href="https://buy.stripe.com/fZeeX57QL34wbjaeVf" style="text-decoration: none;"><div class="main-cta-button" style="opacity: 0;">
         
         <div class="button-text-holder">
           <p class="button-text">Roast me now</p>
@@ -243,6 +243,7 @@
 
 
 
+    <p class="bottom-cta">Like the designs your see? <a class="bottom-cta-a" href="https://hero.augustas.co" target="_blank">Get them here</a></p>
 
       <footer>
 
@@ -252,7 +253,16 @@
             rights reserved</span>
           </h5>
 
-          <img src="https://augustas.co/images/svgs/logotip.svg" alt="logo" class="logo-footer">
+          <img src="https://augustas.co/images/svgs/logotip.svg" alt="logo" class="logo-footer" id="clickable-logo">
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("clickable-logo").addEventListener("click", function () {
+                  window.open("https://yourdestination.com", "_blank");
+                });
+              });
+            </script>
+
 
           <div class="contacts-holder">
             <a href="https://x.com/AugustasWeb/" class="contact-icon" target="_blank">

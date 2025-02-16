@@ -141,6 +141,7 @@ img::selection {
   color: var(--gray1);
   margin-top: 16px;
   letter-spacing: 0.2px;
+  cursor: default;
   margin-bottom: 42px;
 }
 
@@ -148,7 +149,6 @@ img::selection {
   font-family: var(--ff-medium);
   font-weight: var(--font-medium);
   font-size: 18px;
-  
 }
 
 .alt-button-text{
@@ -162,6 +162,7 @@ img::selection {
   font-weight: var(--font-regular);
   font-size: 14px;
   color: var(--gray1);
+  cursor: default;
 }
 
 .proc-number{
@@ -169,12 +170,31 @@ img::selection {
   font-weight: var(--font-regular);
   font-size: 16px;
   color: var(--gray1);
+  cursor: default;
 }
 
 .proc-text{
   font-family: var(--ff-regular);
   font-weight: var(--font-regular);
   font-size: 16px;
+  cursor: default;
+  color: var(--white);
+}
+
+.bottom-cta{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  font-size: 14px;
+  color: var(--gray1);
+  margin-top: 128px;
+  cursor: default;
+  margin-bottom: 24px;
+}
+
+.bottom-cta-a{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  font-size: 14px;
   color: var(--white);
 }
 
@@ -328,7 +348,6 @@ footer{
   border-top: 1px solid #19191A;
   width: 100vw;
   height: 100px;
-  margin-top: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,6 +382,9 @@ footer{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 999;
+  pointer-events: auto;
 }
 
 @media (max-width: 810px) {
@@ -429,6 +451,10 @@ footer{
     font-size: 32px;
   }
 
+  .bottom-cta{
+    margin-top: 64px;
+  }
+
   .main-cta-button{
     margin-right: 16px;
     margin-left: 16px;
@@ -449,7 +475,6 @@ footer{
   footer{
     padding: 32px;
     height: fit-content;
-    margin-top: 64px;
   }
 
 }
