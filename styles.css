@@ -107,7 +107,7 @@ img::selection {
 
 /* ------------------------------------- */
 
-h5{
+h5 {
   font-family: var(--ff-regular);
   font-weight: var(--font-regular);
   cursor: default;
