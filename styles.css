@@ -107,6 +107,12 @@ img::selection {
 
 /* ------------------------------------- */
 
+h5{
+  font-family: var(--ff-regular);
+  font-weight: var(--font-regular);
+  cursor: default;
+}
+
 .tiny-board-text{
   font-family: var(--ff-regular);
   font-weight: var(--font-regular);
