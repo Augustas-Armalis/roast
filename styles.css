@@ -214,7 +214,6 @@ img::selection {
   height: 5px;
   background-color: var(--white);
   border-radius: 50%;
-  animation: pop 1s ease-out infinite;
 }
 
 .circle-small {
@@ -224,19 +223,6 @@ img::selection {
   height: 10px;
   position: relative;
   z-index: 1;
-}
-
-@keyframes pop {
-  0% {
-    width: 8px;
-    height: 8px;
-    opacity: 1;
-  }
-  100% {
-    width: 20px;
-    height: 20px;
-    opacity: 0;
-  }
 }
 
 .main-cta-button{

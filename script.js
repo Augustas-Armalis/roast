@@ -99,3 +99,18 @@ gsap.fromTo(
 );
 
 
+
+
+
+
+function animateCircle(circle) {
+  gsap.fromTo(
+    circle,
+    { width: "8px", height: "8px", opacity: 1 },
+    { width: "20px", height: "20px", opacity: 0, duration: 1, ease: "power2.out", repeat: -1 }
+  );
+}
+
+document.querySelectorAll(".circle-growing").forEach((circle) => {
+  animateCircle(circle);
+});
