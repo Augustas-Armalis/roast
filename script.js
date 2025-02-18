@@ -100,7 +100,14 @@ gsap.fromTo(
 
 
 
-
+document.addEventListener("DOMContentLoaded", function () {
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June", 
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const currentMonth = new Date().getMonth();
+  document.getElementById("month-name").textContent = monthNames[currentMonth];
+});
 
 
 function animateCircle(circle) {
