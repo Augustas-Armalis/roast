@@ -17,6 +17,12 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // --------------------------------------------
 
 gsap.fromTo(
+  ".behind-website-holder",
+  { y: 50, opacity: 0 },
+  { y: 0, opacity: 1, duration: 1.7, ease: "power2.out", delay: 0 }
+);
+
+gsap.fromTo(
   ".website-holder",
   { y: 25, opacity: 0 },
   { y: 0, opacity: 1, duration: 1.5, ease: "power2.out", delay: 0 }
