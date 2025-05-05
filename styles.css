@@ -72,19 +72,19 @@ img::selection {
 @font-face {
   font-family: 'SF Pro Display Regular';
   font-weight: 400;
-  src: url('https://augustas.co/fonts//Sf\ Pro\ Display\ REGULAR.OTF') format('truetype');
+  src: url('https://augustas-armalis.github.io/main/fonts//Sf\ Pro\ Display\ REGULAR.OTF') format('truetype');
 }
 
 @font-face {
   font-family: 'SF Pro Display Medium';
   font-weight: 500;
-  src: url('https://augustas.co/fonts/Sf\ Pro\ Display\ MEDIUM.OTF') format('truetype');
+  src: url('https://augustas-armalis.github.io/main/fonts/Sf\ Pro\ Display\ MEDIUM.OTF') format('truetype');
 }
 
 @font-face {
   font-family: 'SF Pro Display Bold';
   font-weight: 700;
-  src: url('https://augustas.co/fonts/Sf\ Pro\ Display\ BOLD.OTF') format('truetype');
+  src: url('https://augustas-armalis.github.io/main/fonts/Sf\ Pro\ Display\ BOLD.OTF') format('truetype');
 }
 
 :root {
